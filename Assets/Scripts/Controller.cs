@@ -9,6 +9,8 @@ public class Controller : MonoBehaviour
     [SerializeField] private GameObject _camera2;
     [SerializeField] private GameObject _light;
     [SerializeField] private Light _light2;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClip;
 
     private void Update()
     {
@@ -62,6 +64,7 @@ public class Controller : MonoBehaviour
 
     private void Shot()
     {
+        _audioSource.PlayOneShot(_audioClip);
         Destroy(Instantiate(_bullet, transform.position, Quaternion.identity),2);
     }
 }
