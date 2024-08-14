@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health = 3;
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private GameObject _explosionPrefab;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "bullet")
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
         _text.text = _health.ToString();
         if (_health < 0)
         {
+            Destroy(Instantiate(_explosionPrefab, transform.position, Quaternion.identity),2);
             Destroy(gameObject);
         }
     }
