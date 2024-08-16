@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        // старт карутины
+        // СЃС‚Р°СЂС‚ РєР°СЂСѓС‚РёРЅС‹
         if(!_isShooting)
         {
             _isShooting = true;
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
             //Destroy(gameObject);
 
             _health--;
-            //уничтожение пули при попадании
+            //СѓРЅРёС‡С‚РѕР¶РµРЅРёРµ РїСѓР»Рё РїСЂРё РїРѕРїР°РґР°РЅРёРё
             Destroy(other.gameObject);
         }
     }
