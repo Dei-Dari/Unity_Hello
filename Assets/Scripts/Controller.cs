@@ -19,6 +19,7 @@ public class Controller : MonoBehaviour
         {
             Shot();
         }
+
         // переключение камер
         if(Input.GetKeyDown(KeyCode.R)) {
             _cameraMain.SetActive(false);
@@ -64,7 +65,7 @@ public class Controller : MonoBehaviour
 
     private void Shot()
     {
-        _audioSource.PlayOneShot(_audioClip);
+        //_audioSource.PlayOneShot(_audioClip);
         Destroy(Instantiate(_bullet, transform.position, Quaternion.identity),2);
     }
 }
