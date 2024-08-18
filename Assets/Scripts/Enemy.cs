@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.down * _speed * Time.deltaTime);
-        _text.text = _health.ToString();
+        //_text.text = _health.ToString();
         if (_health < 0)
         {
             Destroy(Instantiate(_explosionPrefab, transform.position, Quaternion.identity), 2);
